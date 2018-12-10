@@ -35,7 +35,7 @@ body {
 }
 
 #headline {
-	margin: 30px auto 10px auto;
+	margin-top: 30px; 
 }
 
 #tribute-info {
@@ -52,6 +52,6 @@ body {
 }
 
 blockquote {
-	
-	margin: 15px 40px;
+	font-style: italic;
+	/*margin: 15px 40px;*/
 }

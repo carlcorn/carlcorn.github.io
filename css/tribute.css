@@ -14,10 +14,13 @@ body {
 
 #img-div {
 	margin: 0 0.5em;
-	max-width: : 100%;
+	background-color: white;
+}
+
+#img{
+	max-width: 100%;
 	height: auto;
 	display: block;
-	background-color: white;
 }
 
 #image-caption {

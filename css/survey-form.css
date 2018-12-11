@@ -1,0 +1,45 @@
+body {
+	background-color: #a9d7d1;
+	font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin-top: 0;
+}
+
+#title{
+	text-align: center;
+}
+
+#form-outer {
+	max-width: 550px;
+	margin: auto;
+	padding: 20px 10px;
+	background-color: white;
+	border-radius: 1%;
+	text-align: center;
+}
+
+#description{
+	text-align: center;
+}
+
+.rowTab{
+	width: 100%;
+	margin: 10px 0;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-column-gap: 15px;
+}
+
+.labels{
+	/*max-width: 230px; */
+	text-align: right;
+}
+
+.rightTab{
+	text-align: left;
+	/*max-width: 230px;*/
+}

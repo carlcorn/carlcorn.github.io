@@ -13,13 +13,13 @@
 	<div id="form-outer">
 		<p id="description">Let us know how we can improve freeCodeCamp</p>
 
-		<form id="survey-form">
+		<form id="survey-form" action="#" method="get">
 			<div class="rowTab">
 				<div class="labels">
 					<label id="name-label" for="name">* Name:</label>
 				</div>
 				<div class="rightTab">
-					<input type="text" class="input-field" id="name" name="name" placeholder="Kimi no na wa">	
+					<input type="text" class="input-field" id="name" name="name" placeholder="Kimi no na wa" required>	
 				</div>
 			</div>
 			<div class="rowTab">
@@ -27,7 +27,7 @@
 					<label id="email-label" for="email">* Email:</label>
 				</div>
 				<div class="rightTab">
-					<input type="email" class="input-field" id="email" name="email" placeholder="Your email adress">	
+					<input type="email" class="input-field" id="email" name="email" placeholder="Your email adress" required>	
 				</div>
 			</div>
 			<div class="rowTab">
@@ -35,7 +35,7 @@
 					<label id="number-label" for="number">* Age:</label>
 				</div>
 				<div class="rightTab">
-					<input type="number" class="input-field" id="number" name="number" min="0" max="999" placeholder="Your age">	
+					<input type="number" class="input-field" id="number" name="number" min="0" max="99" placeholder="Your age" required>	
 				</div>
 			</div>
 			<div class="rowTab">
@@ -44,6 +44,7 @@
 				</div>
 				<div class="rightTab">
 					<select class="dropdown" id="dropdown">
+						<option disabled value>Select an option</option>
 						<option value="student">Student</option>
 						<option value="full-time-job">Full Time Job</option>
 						<option value="full-time-learner">Full Time Learner</option>
@@ -58,12 +59,9 @@
 				</div>
 				<div class="rightTab">
 					<ul>
-						<li><input type="radio" id="definitely" class="userRatings" name="recommend">	
-						<label for="definitely">Definitely</label></li>
-						<li><input type="radio" id="maybe" class="userRatings" name="recommend">
-						<label for="maybe">Maybe</label></li>
-						<li><input type="radio" id="not-sure" class="userRatings" name="recommend">
-						<label for="not-sure">Not sure</label></li>
+						<li><label><input type="radio" id="definitely" class="userRatings" name="recommend" required>Definitely</label></li>
+						<li><label><input type="radio" id="maybe" class="userRatings" name="recommend" required>Maybe</label></li>
+						<li><label><input type="radio" id="not-sure" class="userRatings" name="recommend" required>Not sure</label></li>
 					</ul>
 				</div>
 			</div>
@@ -72,7 +70,8 @@
 					<label for="most-like">What do you like most in FCC: </label>
 				</div>
 				<div class="rightTab">
-					<select class="dropdown" id="most-like">
+					<select class="dropdown" name="mostLike" id="most-like">
+						<option disabled selected value>Select an option</option>
 						<option value="Challenge">Challenge</option>
 						<option value="Projects">Projects</option>
 						<option value="Community">Community</option>
@@ -117,13 +116,13 @@
 
 			<div class="rowTab">
 				<div class="labels">
-					<label for="comment">Any Comments or Suggestions?</label>
+					<label for="comments">Any Comments or Suggestions?</label>
 				</div>
 				<div class="rightTab">
-					<textarea id="comment" class="input-field" >Enter your comment here...</textarea>
+					<textarea id="comments" class="input-field" placeholder="Enter your shit here..."></textarea>
 				</div>
 			</div>
-			<button id="submit">Submit</button>
+			<button id="submit" type="submit">Submit</button>
 		</form>
 	</div>
 

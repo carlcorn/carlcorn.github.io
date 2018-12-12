@@ -1,0 +1,40 @@
+body {
+  background-color: #ece6ff;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#nav-bar {
+  background-color: #ece6ff;
+  width: 98%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  z-index: 2;
+}
+
+#nav-bar ul {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+#logo {
+  margin: auto 0;
+  height: 35px;
+}
+
+#header-img {
+  max-height: 100%;
+  width: auto;
+}
+
+
+
+main {
+  position: relative;
+  top: 70px;
+}

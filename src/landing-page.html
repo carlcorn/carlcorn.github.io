@@ -5,8 +5,10 @@
 	<title>Product Landing Page</title>
 	<link rel="stylesheet" type="text/css" href="../css/landing-page.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
 </head>
 <body>
+	
 	<header id="header">
 		<nav id="nav-bar">
 			<div id="logo">
@@ -19,12 +21,13 @@
 			</ul>
 		</nav>
 	</header>
+	<div id="container">
 	<main>
 		<section id="hero">
 			<h2>Handcrafted, home-made masterpieces</h2>
-			<form id="form" action="https://www.freecodecamp.com/email-submit" method="get">
-				<input type="email" id="email" name="email" placeholder="Enter your email">
-				<button type="submit" id="submit" class="btn">GET STARTED</button>
+			<form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+				<input type="email" id="email" name="email" placeholder="Enter your email"><br>
+				<input type="button" id="submit" class="btn" value="GET STARTED">
 			</form>
 		</section>
 
@@ -59,7 +62,7 @@
 		</section>
 
 		<section id="how-it-works">
-			<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/y8Yv4pnO7qc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe id="video"  src="https://www.youtube.com/embed/y8Yv4pnO7qc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</section>
 
 		<section id="pricing">
@@ -67,7 +70,7 @@
 				<div class="level">
 					<p>TENOR TROMBONE</p>
 				</div>
-				<h3>600$</h3>
+				<h2>600$</h2>
 				<ul>
 					<li>Lorem ipsum.</li>
 					<li>Lorem ipsum.</li>
@@ -80,7 +83,7 @@
 				<div class="level">
 					<p>BASS TROMBONE</p>
 				</div>
-				<h3>900$</h3>
+				<h2>900$</h2>
 				<ul>
 					<li>Lorem ipsum.</li>
 					<li>Lorem ipsum.</li>
@@ -93,7 +96,7 @@
 				<div class="level">
 					<p>VALVE TROMBONE</p>
 				</div>
-				<h3>1200$</h3>
+				<h2>1200$</h2>
 				<ul>
 					<li>Lorem ipsum.</li>
 					<li>Lorem ipsum.</li>
@@ -112,7 +115,7 @@
 		</ul>
 		<span>Copyright 2016, Original Trombones</span>
 	</footer>
-
+	</div>
 </body>
 <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>

@@ -11,13 +11,13 @@ body {
 
 #nav-bar {
   background-color: #ece6ff;
-  height: 70px;
+  min-height: 70px;
   width: 100%;
   position: fixed;
   top: 0;
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   z-index: 2;
 }
 
@@ -140,18 +140,6 @@ section {
   font-weight: 800;
 }
 
-@media only screen and (max-width: 800px){
-  #pricing {
-    width: 100%;
-    display: block;
-  }
-
-  .price-box {
-    margin: 20px auto;
-    max-width: 300px;
-    width: 100%;
-  }
-}
 
 footer {
   margin-top: 50px;
@@ -177,4 +165,35 @@ footer span {
   justify-content: right;
   font-size: 14px;
   color: #666;
+}
+
+@media only screen and (max-width: 600px){
+    #nav-bar {
+      flex-flow: column;
+    }
+
+    #nav-bar ul {
+      flex-flow: column;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    main {
+      margin-top: 130px;
+    }
+
+  }
+
+  
+@media only screen and (max-width: 800px){
+  #pricing {
+    width: 100%;
+    display: block;
+  }
+
+  .price-box {
+    margin: 20px auto;
+    max-width: 300px;
+    width: 100%;
+  }
 }

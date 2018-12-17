@@ -1,16 +1,174 @@
-/*Global elemet*/
+/*---------------Global elemet----------------*/
 * {
 	font-family: 'Lato', sans-serif;
 	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
 body {
-	background-color: 
+	--main-bg-color: #fdfdbe;
+	--main-line-color: #e0e052;
+	--footer-bg-color: #1a0001;
+	background-color: var(--main-bg-color);
 }
-/*Global classes*/
+
+h1 {
+	margin: 10px 0;
+}
+
+h2 {
+	margin: 10px 0;
+	font-weight: 500;
+
+}
+/*--------------Global classes----------------*/
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+/*------------------Styling--------------------*/
 
 
 
+/*navigation bar*/
+#navbar{
+	background-color: #fdfdbe;
+	position: fixed;
+	width: 100%;
+	min-height: 65px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	z-index: 2;
+}
+
+#navbar a {
+	text-decoration: none;
+	color: black;
+}
+
+#navbar li {
+	margin: 10px 30px;
+
+}
+
+/*main page*/
+/*#page {
+	position: relative;
+	top: 70px;
+}
+*/
+
+/*welcome section*/
+
+#welcome-section {
+	padding-top: 45vh;
+	height: 100vh;
+	text-align: center;
+}
+
+/*projects section*/
+
+#projects {
+	background-color: white;
+	text-align: center;
+	padding: 50px 0px; 
+}
+
+#projects a {
+	text-decoration-line: none;
+	color: black;
+}
+
+#projects h3 {
+	margin: 20px auto;
+	font-weight: 500;
+}
+
+
+.project-title {
+	max-width: 280px;
+	width: 100%;
+	height: auto;
+	margin: 30px 50px;
+	text-align: center;
+	border: 2px solid var(--main-line-color);
+}
+
+.project-img {
+	width: 100%;
+	height: auto;
+}
+
+a.btn {
+	background-color: var(--main-bg-color);
+	border: var(--main-line-color) solid 2px;
+	/*padding: 10px 40px;*/
+	display: block;
+	max-width: 200px;  
+	width: 100%;
+	padding: 10px 0;
+	margin: 60px auto;
+	font-size: 17px;
+	font-weight: 600;
+}
+
+a.btn:hover {
+	background-color: #fdfdce;
+}
+
+/*contact*/
+
+#contact {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+#contact-links a {
+	margin: 20px 40px;
+	padding: 10px 0;
+	max-width: 100px;
+	width: 100%;
+	text-decoration: none;
+	color: black;
+	border: 2px solid white;
+	border-radius: 10px;
+	background-color: white;
+}
+
+/*footer*/
+
+footer {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	text-align: right;
+	background-color: var(--footer-bg-color);
+	color: white;
+}
+
+footer p {
+	margin: 20px 10px;
+}
 
 /*Media Queries*/
+@media screen and (max-width: 300px) {
+	#navbar {
+		flex-wrap: wrap;
+
+	}	
+}
+
+@media screen and (min-width: 500px) {
+	#navbar {
+		display: flex;
+		justify-content: right;
+		align-items: center;
+
+	}	
+}

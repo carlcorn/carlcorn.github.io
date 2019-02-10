@@ -9,10 +9,13 @@ body {
 /* -----------------individual elements */
 #screen {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #quote-box {
-  max-width: 60vw;
+  /* max-width: 70vw; */
   padding: 30px;
   margin: 0 auto;
   background-color: white;

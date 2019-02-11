@@ -3,9 +3,9 @@ body {
   background-color: #2fed71;
 }
 
-h1 { font-size: 4.5vw; }
+/* h1 { font-size: 4.5vw; }
 h2 { font-size: 3.0vh; }
-p { font-size: 2vmin; }
+p,a,button { font-size: 2vmin; } */
 /* -----------------global classes */
 
 
@@ -19,8 +19,8 @@ p { font-size: 2vmin; }
 
 #quote-box {
   /* max-width: 70vw; */
-  /* max-width: 100%; */
-  /* height: auto; */
+  max-width: 100%;
+  height: auto;
   padding: 30px;
   margin: 0 auto;
   background-color: white;

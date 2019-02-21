@@ -12,7 +12,7 @@ p,a,button { font-size: 2vmin; } */
 /* -----------------individual elements */
 #screen {
   height: 100vh;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
 }
@@ -25,4 +25,32 @@ p,a,button { font-size: 2vmin; } */
   margin: 0 auto;
   background-color: white;
   border-radius: 5px;
+}
+
+#author {
+  text-align: right;
+  font-style: italic;
+}
+
+#buttons {
+  justify-content: space-between;
+}
+
+.button {
+  background-color: #2fed71;
+  border-style: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.button:hover{
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+}
+
+.fa-twitter {
+  color: white;
 }

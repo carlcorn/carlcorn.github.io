@@ -9,7 +9,7 @@ body {
   background-color: #2fed71;
   border-style: none;
   color: white;
-  padding: 5px 10px;
+  padding: 9px 12px;
   border-radius: 3px;
   text-decoration: none;
 }
@@ -23,7 +23,6 @@ body {
 .fa-twitter {
   color: white;
 }
-
 
 /* -----------------individual elements */
 #screen {
@@ -43,11 +42,26 @@ body {
   border-radius: 5px;
 }
 
+#text {
+  color: #2fed71;
+  display: inline;
+  font-size: 33px;
+  padding: 10px 15px;
+}
+
 #author {
   text-align: right;
   font-style: italic;
+  color: #2fed71;
+  margin: 10px 0px 20px 0px;
 }
 
 #buttons {
   justify-content: space-between;
+}
+
+.quotemark{
+  display: inline;
+  color: #2fed71;
+  font-size: 25px;
 }

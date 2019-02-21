@@ -3,38 +3,7 @@ body {
   background-color: #2fed71;
 }
 
-/* h1 { font-size: 4.5vw; }
-h2 { font-size: 3.0vh; }
-p,a,button { font-size: 2vmin; } */
 /* -----------------global classes */
-
-
-/* -----------------individual elements */
-#screen {
-  height: 100vh;
-  /* display: flex; */
-  justify-content: center;
-  align-items: center;
-}
-
-#quote-box {
-  /* max-width: 70vw; */
-  max-width: 100%;
-  height: auto;
-  padding: 30px;
-  margin: 0 auto;
-  background-color: white;
-  border-radius: 5px;
-}
-
-#author {
-  text-align: right;
-  font-style: italic;
-}
-
-#buttons {
-  justify-content: space-between;
-}
 
 .button {
   background-color: #2fed71;
@@ -53,4 +22,32 @@ p,a,button { font-size: 2vmin; } */
 
 .fa-twitter {
   color: white;
+}
+
+
+/* -----------------individual elements */
+#screen {
+  height: 100vh;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+#quote-box {
+  /* max-width: 70vw; */
+  max-width: 600px;
+  height: auto;
+  padding: 30px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
+#author {
+  text-align: right;
+  font-style: italic;
+}
+
+#buttons {
+  justify-content: space-between;
 }

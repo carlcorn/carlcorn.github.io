@@ -1,0 +1,16 @@
+{
+  "name": "carlcorn.github.io-master",
+  "version": "1.0.0",
+  "description": "Experimental Site",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"test\"",
+    "sass": "node-sass -w portfolio/scss/ -o portfolio/ --recursive"
+  },
+  "author": "carlcorn",
+  "license": "MIT"
+}

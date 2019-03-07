@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"test\"",
-    "sass": "node-sass -w portfolio/scss/ -o portfolio/ --recursive"
+    "sass": "node-sass -w portfolio/scss/ -o portfolio/css --recursive"
   },
   "author": "carlcorn",
   "license": "MIT"

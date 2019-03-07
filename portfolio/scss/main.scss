@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
-
-$primary-color: #26F6A1;
-$secondary-color: white;
-$left-right-padding: 2.5rem;
-$show-home-image: true;
-$home-image: url(/portfolio/img/homepage.jpg);
-$overlay-opacity: 0.4;
+@import 'config';
+@import 'menu';
 
 * {
     box-sizing: border-box;
@@ -73,14 +68,16 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    .menu-btn {
-        min-width: 1.8rem;
-        margin-left: 1rem;
-    }
+    
 
     .logo {
         height: 3rem;
         padding-top: 0.2rem;
+    }
+    .menu-btn {
+        min-width: 1.8rem;
+        margin-left: 1rem;
+        cursor: pointer;
     }
 
 }

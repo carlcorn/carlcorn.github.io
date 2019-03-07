@@ -48,12 +48,13 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between; }
-  header .menu-btn {
-    min-width: 1.8rem;
-    margin-left: 1rem; }
   header .logo {
     height: 3rem;
     padding-top: 0.2rem; }
+  header .menu-btn {
+    min-width: 1.8rem;
+    margin-left: 1rem;
+    cursor: pointer; }
 
 nav .menu-bar {
   display: none; }

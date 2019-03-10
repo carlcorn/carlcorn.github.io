@@ -23,7 +23,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: right;
   width: 25rem;
   height: 100%;
   top: 0;
@@ -56,6 +55,18 @@
         transition: all 0.5s ease-out; }
       .menu .menu-nav .nav-item.current > a {
         color: #26F6A1; }
+
+@media screen and (max-width: 520px) {
+  main#home {
+    text-align: center; }
+  .menu {
+    width: 100%;
+    align-items: center; }
+    .menu .menu-nav {
+      padding: 0;
+      font-size: 1.8rem;
+      line-height: 4.5rem;
+      text-align: center; } }
 
 * {
   box-sizing: border-box; }

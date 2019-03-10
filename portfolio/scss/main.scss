@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 @import 'config';
 @import 'menu';
+@import 'mobile';
 
 * {
     box-sizing: border-box;
@@ -43,8 +44,6 @@ body{
 }
 
 //text
-
-
 a {
     color: $secondary-color;
     text-decoration: none;

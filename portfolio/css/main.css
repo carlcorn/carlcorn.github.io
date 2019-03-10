@@ -1,4 +1,62 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans");
+.buttons {
+  position: fixed;
+  right: calc(1.5rem + 28px);
+  top: 2rem;
+  cursor: pointer;
+  z-index: 10; }
+  .buttons .back-btn {
+    opacity: 0; }
+  .buttons .menu-btn {
+    left: -0.1rem;
+    top: 0.15rem; }
+  .buttons .menu-btn, .buttons .back-btn {
+    position: absolute; }
+    .buttons .menu-btn.close, .buttons .back-btn.close {
+      opacity: 0; }
+    .buttons .menu-btn.show, .buttons .back-btn.show {
+      opacity: 100; }
+
+.menu {
+  visibility: hidden;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: right;
+  width: 25rem;
+  height: 100%;
+  top: 0;
+  right: 0;
+  opacity: 0.8;
+  background-color: black;
+  transform: translate3d(100%, 0, 0);
+  z-index: 5;
+  transition: all 0.5s ease-out; }
+  .menu.show {
+    visibility: visible;
+    transform: translate3d(0, 0, 0); }
+  .menu .menu-nav {
+    margin: 0;
+    width: 80%;
+    font-size: 1.2rem;
+    list-style: none;
+    text-align: right;
+    line-height: 3rem; }
+    .menu .menu-nav .nav-item {
+      transform: translate3d(-20rem, 0, 0);
+      opacity: 0;
+      transition: all 0.5s ease-out; }
+      .menu .menu-nav .nav-item.show {
+        transition: all 0.5s ease-out;
+        transform: translate3d(0, 0, 0);
+        opacity: 100; }
+      .menu .menu-nav .nav-item:hover a {
+        color: #26F6A1;
+        transition: all 0.5s ease-out; }
+      .menu .menu-nav .nav-item.current > a {
+        color: #26F6A1; }
+
 * {
   box-sizing: border-box; }
 
@@ -24,45 +82,31 @@ body {
       background: rgba(0, 0, 0, 0.4);
       z-index: -1; }
 
-h1 {
-  margin: 0; }
-  h1.lg-heading {
-    font-size: 4.5vh; }
-
-p {
-  margin: 0;
-  color: white; }
-  p.sm-heading {
-    margin-top: 0.3rem;
-    font-size: 2.5vh; }
-
 a {
   color: white;
   text-decoration: none; }
 
 header {
-  padding: 0 2.5rem;
-  top: 2.5rem;
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-  display: flex;
-  justify-content: space-between; }
+  padding: 0 1.5rem;
+  padding-top: 1.5rem;
+  position: fixed; }
   header .logo {
-    height: 3rem;
-    padding-top: 0.2rem; }
-  header .menu-btn {
-    min-width: 1.8rem;
-    margin-left: 1rem;
-    cursor: pointer; }
-
-nav .menu-bar {
-  display: none; }
+    height: 3rem; }
 
 main {
   width: 100%;
-  padding: 0 2.5rem; }
+  padding: 0 1.5rem; }
   main#home {
     overflow: hidden;
     position: absolute;
     top: 50vh; }
+  main h1 {
+    margin: 0; }
+    main h1.lg-heading {
+      font-size: 4.5vh; }
+  main p {
+    margin: 0;
+    color: white; }
+    main p.sm-heading {
+      margin-top: 0.3rem;
+      font-size: 2.5vh; }

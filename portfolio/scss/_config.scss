@@ -1,10 +1,14 @@
 $primary-color: #26F6A1;
 $secondary-color: white;
+$overlay-color: rgb(0, 0, 0);
 $left-right-padding: 1.5rem;
 $top-padding: 1.5rem;
 $show-home-image: true;
 $home-image: url(/portfolio/img/homepage.jpg);
-$overlay-opacity: 0.4;
+$aboutme-image: url(/portfolio/img/aboutme.jpg);
+$overlay-opacity: 0.5;
+$lg-heading-size: 2rem;
+$sm-heading-size: 1rem;
 
 @mixin mediaSm {
     @media screen and (max-width: 520px){

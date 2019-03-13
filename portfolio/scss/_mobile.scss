@@ -4,7 +4,17 @@
     main {
         &#home {
             text-align: center;
+            // .lg-heading {
+            //     font-size: 1.5rem;
+            // }
+    
+            // .sm-heading {
+            //     font-size: 0.8rem;
+            // }
         }
+        
+            
+        
     }
 
     .menu {
@@ -16,6 +26,14 @@
             line-height: 4.5rem;
             text-align: center;
             // padding: 0;
+        }
+    }
+}
+
+@include mediaMd {
+    main {
+        &#home {
+            text-align: center;
         }
     }
 }

@@ -68,30 +68,51 @@
       line-height: 4.5rem;
       text-align: center; } }
 
+@media screen and (max-width: 768px) {
+  main#home {
+    text-align: center; } }
+
 * {
   box-sizing: border-box; }
 
 body {
-  color: #26F6A1;
+  color: white;
   height: 100%;
   width: 100%;
   margin: 0;
   font-family: 'Noto Sans', sans-serif; }
-  body#bg-img {
+  body#bg-img-home {
     background: url(/portfolio/img/homepage.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
-    body#bg-img:after {
+    body#bg-img-home:after {
       content: "";
       position: absolute;
       top: 0;
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.5);
       z-index: -1; }
+  body#bg-img-aboutme {
+    background: url(/portfolio/img/aboutme.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+    body#bg-img-aboutme:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1; }
+  body .highlight {
+    color: #26F6A1; }
 
 a {
   color: white;
@@ -110,14 +131,14 @@ main {
   main#home {
     overflow: hidden;
     position: absolute;
-    top: 50vh; }
+    top: calc(50vh - 2rem); }
   main h1 {
     margin: 0; }
     main h1.lg-heading {
-      font-size: 4.5vh; }
+      font-size: 2rem; }
   main p {
     margin: 0;
     color: white; }
     main p.sm-heading {
       margin-top: 0.3rem;
-      font-size: 2.5vh; }
+      font-size: 1rem; }

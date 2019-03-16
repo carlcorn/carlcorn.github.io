@@ -1,3 +1,4 @@
+//menu queries
 const menu = document.querySelector('.menu');
 const body = document.querySelector('body');
 const menuBtn = document.querySelector('.menu-btn');
@@ -9,6 +10,8 @@ const currPage = document.querySelector('.current')
 //Inital state of menu
 let showMenu = false;
 
+
+//menu events
 menuBtn.addEventListener('click', toggleMenu);
 currPage.addEventListener('click', closeMenu);
 

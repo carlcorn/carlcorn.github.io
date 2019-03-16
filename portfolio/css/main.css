@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans");
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 .buttons {
   position: fixed;
   right: calc(1.5rem + 28px);
@@ -61,6 +73,9 @@
     position: relative;
     width: 100%;
     text-align: center; }
+  main#aboutme .title-section {
+    position: initial;
+    max-width: initial; }
   .menu {
     width: 100%;
     align-items: center; }
@@ -71,8 +86,23 @@
       text-align: center; } }
 
 @media screen and (max-width: 768px) {
-  mainhome .title-section {
-    text-align: center; } }
+  main#aboutme .title-section {
+    position: relative;
+    max-width: unset !important;
+    text-align: center;
+    top: initial;
+    padding-top: 6rem; }
+  main#aboutme .content-section {
+    padding-top: 3rem; }
+    main#aboutme .content-section .container {
+      width: 80%; }
+      main#aboutme .content-section .container .portrait-area {
+        flex-direction: column;
+        align-items: center; }
+        main#aboutme .content-section .container .portrait-area .social-media {
+          padding-left: 0;
+          width: 50%;
+          padding-top: 1rem; } }
 
 * {
   box-sizing: border-box; }
@@ -111,7 +141,7 @@ body {
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.7);
       z-index: -1; }
   body .highlight {
     color: #26F6A1; }
@@ -142,6 +172,7 @@ main {
       font-size: 1rem; }
   main .title-section {
     overflow: hidden;
+    height: 100%;
     position: fixed;
     top: calc(50vh - 2rem); }
   main#aboutme .title-section {
@@ -165,23 +196,45 @@ main {
             border-radius: 50%;
             border: 1px solid #26F6A1; }
         main .content-section .container .portrait-area .social-media {
+          width: 40%;
+          margin: 0;
+          padding-left: 2rem;
           list-style: none;
           display: flex;
-          flex-direction: column;
-          justify-content: center;
-          justify-items: center;
-          margin: 0; }
+          flex-wrap: nowrap;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center; }
           main .content-section .container .portrait-area .social-media .social-media-link {
-            padding-top: 0.5rem; }
-            main .content-section .container .portrait-area .social-media .social-media-link span {
-              padding-left: 2rem;
-              opacity: 100%; }
-            main .content-section .container .portrait-area .social-media .social-media-link:hover {
-              color: #26F6A1; }
-              main .content-section .container .portrait-area .social-media .social-media-link:hover span {
-                opacity: 100%; }
+            padding: 0.5rem;
+            cursor: pointer; }
+            main .content-section .container .portrait-area .social-media .social-media-link a {
+              text-align: center;
+              position: relative; }
+              main .content-section .container .portrait-area .social-media .social-media-link a .popuptext {
+                visibility: hidden;
+                color: white;
+                opacity: 0;
+                text-align: center;
+                line-height: 2rem;
+                position: absolute;
+                left: -2.5rem;
+                top: 2rem;
+                width: 7rem;
+                height: 2rem;
+                background-color: rgba(0, 0, 0, 0.8);
+                border: 1px #26F6A1 solid;
+                border-radius: 5px; }
+              main .content-section .container .portrait-area .social-media .social-media-link a:hover {
+                transition: all 1s ease-out;
+                color: #26F6A1; }
+                main .content-section .container .portrait-area .social-media .social-media-link a:hover .popuptext {
+                  visibility: visible;
+                  transition: all 1s ease-out;
+                  opacity: 1; }
       main .content-section .container .bio {
-        margin-top: 1rem; }
+        margin: 1rem auto;
+        max-width: 500px; }
         main .content-section .container .bio #name {
           text-align: center;
           color: #26F6A1; }

@@ -2,15 +2,14 @@
 
 @include mediaSm {
     main {
+        // padding: 0 $left-right-padding;
         &#home {
-            text-align: center;
-            // .lg-heading {
-            //     font-size: 1.5rem;
-            // }
-    
-            // .sm-heading {
-            //     font-size: 0.8rem;
-            // }
+            .title-section{
+                position: relative;
+                width: 100%;
+                text-align: center;
+            }
+            
         }
         
             
@@ -32,8 +31,10 @@
 
 @include mediaMd {
     main {
-        &#home {
-            text-align: center;
+        &home {
+            .title-section {
+                text-align: center;
+            }
         }
     }
 }

@@ -57,7 +57,9 @@
         color: #26F6A1; }
 
 @media screen and (max-width: 520px) {
-  main#home {
+  main#home .title-section {
+    position: relative;
+    width: 100%;
     text-align: center; }
   .menu {
     width: 100%;
@@ -69,7 +71,7 @@
       text-align: center; } }
 
 @media screen and (max-width: 768px) {
-  main#home {
+  mainhome .title-section {
     text-align: center; } }
 
 * {
@@ -89,7 +91,7 @@ body {
     background-size: cover; }
     body#bg-img-home:after {
       content: "";
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       width: 100%;
@@ -104,12 +106,12 @@ body {
     background-size: cover; }
     body#bg-img-aboutme:after {
       content: "";
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.5);
       z-index: -1; }
   body .highlight {
     color: #26F6A1; }
@@ -128,10 +130,6 @@ header {
 main {
   width: 100%;
   padding: 0 1.5rem; }
-  main#home {
-    overflow: hidden;
-    position: absolute;
-    top: calc(50vh - 2rem); }
   main h1 {
     margin: 0; }
     main h1.lg-heading {
@@ -142,3 +140,50 @@ main {
     main p.sm-heading {
       margin-top: 0.3rem;
       font-size: 1rem; }
+  main .title-section {
+    overflow: hidden;
+    position: fixed;
+    top: calc(50vh - 2rem); }
+  main#aboutme .title-section {
+    max-width: 16%; }
+  main .content-section {
+    width: 100%;
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    main .content-section .container {
+      width: 65%; }
+      main .content-section .container .portrait-area {
+        display: flex;
+        justify-content: center; }
+        main .content-section .container .portrait-area .img-container {
+          max-width: 180px; }
+          main .content-section .container .portrait-area .img-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            border: 1px solid #26F6A1; }
+        main .content-section .container .portrait-area .social-media {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          justify-items: center;
+          margin: 0; }
+          main .content-section .container .portrait-area .social-media .social-media-link {
+            padding-top: 0.5rem; }
+            main .content-section .container .portrait-area .social-media .social-media-link span {
+              padding-left: 2rem;
+              opacity: 100%; }
+            main .content-section .container .portrait-area .social-media .social-media-link:hover {
+              color: #26F6A1; }
+              main .content-section .container .portrait-area .social-media .social-media-link:hover span {
+                opacity: 100%; }
+      main .content-section .container .bio {
+        margin-top: 1rem; }
+        main .content-section .container .bio #name {
+          text-align: center;
+          color: #26F6A1; }
+        main .content-section .container .bio p {
+          margin-top: 0.5rem; }

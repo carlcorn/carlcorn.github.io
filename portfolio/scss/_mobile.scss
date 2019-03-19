@@ -8,7 +8,7 @@
         //     }
         // }
 
-        &#aboutme, &#mywork {
+        &#aboutme, &#mywork, &#contactme {
             
             .title-section{
                 position: relative;
@@ -40,7 +40,16 @@
                 }
             }
         }
+
+        &#contactme {
+            .container {
+                padding-top: initial !important; 
+
+                
+            }
+        }
     }
+
 }
 
 @include mediaSm {
@@ -62,16 +71,31 @@
         //     }
         // }
         
-            &#mywork {
-
+        &#mywork {
+            .container {
                 .project-hover {
-                    flex-direction: column;
+                    flex-direction: column !important;
 
                     .project-description, .project-links {
-                        width: 100%;
+                        width: 100% !important;
                     }
                 }
             }
+        }
+
+        &#contactme {
+            .name-email {
+                flex-direction: column;
+
+                div {
+                    width: 100% !important;
+                }
+            }
+
+            input {
+                width: 100% !important;
+            }
+        }
         
     }
 

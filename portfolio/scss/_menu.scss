@@ -42,7 +42,7 @@
     height: 100%;
     top: 0;
     right: 0;
-    opacity: 0.8;
+    opacity: $menu-overlay-opacity;
     background-color: black;
     transform: translate3d(100%, 0, 0);
     z-index: 5;

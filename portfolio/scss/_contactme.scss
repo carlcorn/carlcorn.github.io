@@ -1,0 +1,65 @@
+@mixin contactme {
+    // position: absolute;
+    padding-top: 5vh; 
+    form {
+        // top: 70%;
+        
+        .name-email {
+            display: flex;
+            justify-content: center;
+
+            div {
+                width: 50%;
+            }
+        }
+
+        div {
+            position: relative;
+            margin-top: 1rem;
+            
+            
+            
+            input{
+                display: block;
+                width: 90%;
+                margin: 0;
+            }
+
+            textarea {
+                // margin-top: 0.5rem;
+                display: block;
+                width: 100%;
+                min-height: 200px; 
+            }
+
+            input, textarea {
+                background-color: rgba(2, 2, 2, 0.9);
+                color: white;
+                // border: 1px $secondary-color solid;
+                border: none;
+                font-family: $primary-font;
+                font-size: 1rem;
+                padding: 0.5rem;
+
+                &:focus {
+                    border: 1px $primary-color solid;
+                }
+            }
+        }
+        
+        
+        .default-btn {
+            margin: 1rem 0;
+            width: 20%;
+            height: 3rem;
+            float: right;
+        }
+
+        
+    }
+    
+    // label {
+    //     display: block;
+
+    // }
+}

@@ -4,11 +4,18 @@
 @import 'mobile';
 @import 'aboutme';
 @import 'mywork';
+@import 'contactme';
 
 * {
     box-sizing: border-box;
 }
 
+@mixin hoverChange {
+    &:hover { 
+        color: $primary-color;
+        @include easeOut;
+    }
+}
 
 
 body{
@@ -17,7 +24,7 @@ body{
     height: 100%;
     width: 100%;
     margin: 0;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: $primary-font;
 
     .highlight{
         color: $primary-color;
@@ -29,6 +36,25 @@ body{
 a {
     color: $secondary-color;
     text-decoration: none;
+    @include hoverChange();
+}
+
+.default-btn {
+    background-color: black;
+    padding: 0.5rem  2rem;
+    border-radius: 6px;
+    color: $secondary-color;
+    // border: 1px $secondary-color solid;
+    border: none;
+    &:hover { 
+        color: $primary-color;
+        // border-color: $primary-color;
+        @include easeOut;
+    }
+
+    &:focus {
+        color: $primary-color;
+    }
 }
 
 //header
@@ -74,13 +100,30 @@ main {
         }
     }
 
-    .btn-default {
-        background-color: rgba(0, 0, 0, 0.356);
-        // border-radius: 6px;
-        opacity: 1;
+    // .btn-default {
+    //     background-color: rgba(0, 0, 0, 0.356);
+    //     // border-radius: 6px;
+    //     opacity: 1;
 
         
+    // }
+
+    &#aboutme {
+        .container{
+            @include aboutme;
+        }
     }
+    &#mywork {
+        .container{
+            @include mywork;
+        }
+    }
+    &#contactme {
+        .container{
+            @include contactme;
+        }
+    }
+    
     
     &#aboutme, &#mywork {
         .title-section {
@@ -101,25 +144,21 @@ main {
     .content-section {
         // padding: $top-padding $left-right-padding;
         width: 100%;
-        float: right;
         padding-top: 6rem;
         justify-content: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        // align-items: center;
 
         .container {
             width: 58%;
             margin: 0 auto;
             
-            @include aboutme;
-            @include mywork;
+            // @include aboutme;
+            // @include mywork;
+            // @include contactme;
         }
 
-        .default-btn {
-            background-color: black;
-            padding: 0.5rem  2rem;
-            border-radius: 6px;
-        }
+        
     }
 }

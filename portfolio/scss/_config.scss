@@ -2,8 +2,10 @@ html {
     font-size: 14px;
 }
 
+
 $primary-color: #26F6A1;
 $secondary-color: white;
+$primary-font: 'Noto Sans', sans-serif;
 $overlay-color: rgb(0, 0, 0);
 $left-right-padding: 1.5rem;
 $top-padding: 1.5rem;
@@ -11,7 +13,9 @@ $show-home-image: true;
 $home-image: url(/portfolio/img/homepage.jpg);
 $aboutme-image: url(/portfolio/img/aboutme.jpg);
 $mywork-image: url(/portfolio/img/mywork.jpg);
+$contactme-image: url(/portfolio/img/contactme.jpg);
 $overlay-opacity: 0.5;
+$menu-overlay-opacity: 0.9;
 $lg-heading-size: 2rem;
 $sm-heading-size: 1rem;
 
@@ -102,6 +106,23 @@ $sm-heading-size: 1rem;
                 width: 100%;
                 height: 100%;
                 background: rgba($color: $overlay-color, $alpha: 0.8);
+                z-index: -1;
+            }
+        }
+        &#bg-img-contactme  {
+            background: $contactme-image;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            &:after {
+                content: "";
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba($color: $overlay-color, $alpha: 0.6);
                 z-index: -1;
             }
         }

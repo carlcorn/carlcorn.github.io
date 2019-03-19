@@ -84,7 +84,7 @@
                 }
             }
 
-            &:hover {
+            &:hover, &:focus {
                 @include easeOut();
                 max-height: 100vh;
                 .project-hover{

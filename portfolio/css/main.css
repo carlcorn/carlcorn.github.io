@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans");
-@keyframes fadeIn {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
+html {
+  font-size: 14px; }
 
 @keyframes fadeIn {
   from {
@@ -68,14 +65,34 @@
       .menu .menu-nav .nav-item.current > a {
         color: #26F6A1; }
 
+@media screen and (max-width: 900px) {
+  main#aboutme .title-section, main#mywork .title-section {
+    position: relative;
+    max-width: 100% !important;
+    text-align: center;
+    top: 0;
+    padding-top: 6rem; }
+  main#aboutme .content-section, main#mywork .content-section {
+    padding-top: 3rem; }
+    main#aboutme .content-section .container, main#mywork .content-section .container {
+      width: 80%; }
+  main#aboutme .portrait-area, main#mywork .portrait-area {
+    flex-direction: column;
+    align-items: center; }
+    main#aboutme .portrait-area .social-media, main#mywork .portrait-area .social-media {
+      padding-left: 0;
+      width: 50%;
+      padding-top: 1rem; } }
+
 @media screen and (max-width: 520px) {
   main#home .title-section {
     position: relative;
     width: 100%;
     text-align: center; }
-  main#aboutme .title-section {
-    position: initial;
-    max-width: initial; }
+  main#mywork .project-hover {
+    flex-direction: column; }
+    main#mywork .project-hover .project-description, main#mywork .project-hover .project-links {
+      width: 100%; }
   .menu {
     width: 100%;
     align-items: center; }
@@ -84,25 +101,6 @@
       font-size: 1.8rem;
       line-height: 4.5rem;
       text-align: center; } }
-
-@media screen and (max-width: 768px) {
-  main#aboutme .title-section {
-    position: relative;
-    max-width: unset !important;
-    text-align: center;
-    top: initial;
-    padding-top: 6rem; }
-  main#aboutme .content-section {
-    padding-top: 3rem; }
-    main#aboutme .content-section .container {
-      width: 80%; }
-      main#aboutme .content-section .container .portrait-area {
-        flex-direction: column;
-        align-items: center; }
-        main#aboutme .content-section .container .portrait-area .social-media {
-          padding-left: 0;
-          width: 50%;
-          padding-top: 1rem; } }
 
 * {
   box-sizing: border-box; }
@@ -143,6 +141,21 @@ body {
       height: 100%;
       background: rgba(0, 0, 0, 0.7);
       z-index: -1; }
+  body#bg-img-mywork {
+    background: url(/portfolio/img/mywork.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+    body#bg-img-mywork:after {
+      content: "";
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: -1; }
   body .highlight {
     color: #26F6A1; }
 
@@ -153,7 +166,8 @@ a {
 header {
   padding: 0 1.5rem;
   padding-top: 1.5rem;
-  position: fixed; }
+  position: fixed;
+  z-index: 5; }
   header .logo {
     height: 3rem; }
 
@@ -170,22 +184,32 @@ main {
     main p.sm-heading {
       margin-top: 0.3rem;
       font-size: 1rem; }
+  main a:hover {
+    color: #26F6A1;
+    transition: all 0.5s ease-out; }
+  main .btn-default {
+    background-color: rgba(0, 0, 0, 0.356);
+    opacity: 1; }
+  main#aboutme .title-section, main#mywork .title-section {
+    max-width: 20%; }
   main .title-section {
     overflow: hidden;
-    height: 100%;
     position: fixed;
     top: calc(50vh - 2rem); }
-  main#aboutme .title-section {
-    max-width: 16%; }
   main .content-section {
     width: 100%;
+    float: right;
     padding-top: 6rem;
+    justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center; }
     main .content-section .container {
-      width: 65%; }
+      width: 58%;
+      margin: 0 auto; }
       main .content-section .container .portrait-area {
+        margin: 0 auto;
+        max-width: 700px;
         display: flex;
         justify-content: center; }
         main .content-section .container .portrait-area .img-container {
@@ -226,17 +250,97 @@ main {
                 border: 1px #26F6A1 solid;
                 border-radius: 5px; }
               main .content-section .container .portrait-area .social-media .social-media-link a:hover {
-                transition: all 1s ease-out;
+                transition: all 0.5s ease-out;
                 color: #26F6A1; }
                 main .content-section .container .portrait-area .social-media .social-media-link a:hover .popuptext {
                   visibility: visible;
-                  transition: all 1s ease-out;
+                  transition: all 0.5s ease-out;
                   opacity: 1; }
       main .content-section .container .bio {
         margin: 1rem auto;
-        max-width: 500px; }
+        max-width: 650px; }
         main .content-section .container .bio #name {
           text-align: center;
           color: #26F6A1; }
         main .content-section .container .bio p {
           margin-top: 0.5rem; }
+      main .content-section .container h3 {
+        color: #26F6A1; }
+      main .content-section .container .project-list {
+        padding-top: 2rem; }
+        main .content-section .container .project-list .project-container {
+          position: relative;
+          margin: 1rem 0;
+          width: 100%;
+          max-height: 200px;
+          overflow: auto;
+          background-size: cover;
+          background-position: center;
+          overflow: hidden;
+          transition: all 0.2s ease-out; }
+          main .content-section .container .project-list .project-container#project1 {
+            background-image: url(/portfolio/img/project1-sm.jpg); }
+          main .content-section .container .project-list .project-container#project2 {
+            background-image: url(/portfolio/img/project2-sm.jpg); }
+          main .content-section .container .project-list .project-container#project3 {
+            background-image: url(/portfolio/img/project3-sm.jpg); }
+          main .content-section .container .project-list .project-container .project-hover {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            padding: 1rem;
+            visibility: hidden;
+            opacity: 0; }
+            main .content-section .container .project-list .project-container .project-hover .hover-overlay {
+              position: absolute;
+              top: 0;
+              left: 0;
+              background: black;
+              opacity: 0.8;
+              width: 100.5%;
+              height: 100.5%;
+              z-index: 0;
+              transform: translate3d(0, -100%, 0); }
+            main .content-section .container .project-list .project-container .project-hover .project-description {
+              width: 65%;
+              padding: 1rem;
+              z-index: 1;
+              transform: translate3d(-3rem, 0, 0); }
+              main .content-section .container .project-list .project-container .project-hover .project-description .project-name {
+                margin: 0; }
+              main .content-section .container .project-list .project-container .project-hover .project-description .project-list {
+                padding-left: 2rem;
+                padding-top: 1rem; }
+            main .content-section .container .project-list .project-container .project-hover .project-links {
+              width: 35%;
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: center;
+              align-content: flex-end;
+              align-items: center;
+              z-index: 1;
+              transform: translate3d(3rem, 0, 0); }
+              main .content-section .container .project-list .project-container .project-hover .project-links .source-link {
+                padding: 0.5rem  2rem; }
+          main .content-section .container .project-list .project-container:hover {
+            transition: all 0.5s ease-out;
+            max-height: 100vh; }
+            main .content-section .container .project-list .project-container:hover .project-hover {
+              visibility: visible;
+              opacity: 1;
+              transition: all 0.2s ease-out; }
+              main .content-section .container .project-list .project-container:hover .project-hover .hover-overlay {
+                transform: translate3d(0, 0, 0);
+                transition: all 0.2s ease-out; }
+              main .content-section .container .project-list .project-container:hover .project-hover .project-description {
+                transform: translate3d(0, 0, 0);
+                transition: all 0.2s ease-out; }
+              main .content-section .container .project-list .project-container:hover .project-hover .project-links {
+                transform: translate3d(0, 0, 0);
+                transition: all 0.2s ease-out; }
+    main .content-section .default-btn {
+      background-color: black;
+      padding: 0.5rem  2rem;
+      border-radius: 6px; }

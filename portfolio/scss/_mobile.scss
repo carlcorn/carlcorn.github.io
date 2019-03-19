@@ -1,4 +1,47 @@
-// @import 'config';
+
+
+@include mediaMd {
+    main {
+        // &#home {
+        //     .title-section {
+        //         text-align: center;
+        //     }
+        // }
+
+        &#aboutme, &#mywork {
+            
+            .title-section{
+                position: relative;
+                // width: 100%;
+                max-width: 100% !important;
+                text-align: center;
+                top: 0;
+                padding-top: 6rem;
+            }
+
+            .content-section {
+                padding-top: 3rem;
+                .container {    
+                    width: 80%;
+
+                }    
+            }
+
+            .portrait-area {
+                flex-direction: column;
+                align-items: center;
+                .social-media {
+                    padding-left: 0;
+                    width: 50%;
+                    // justify-content: space-between;
+                    padding-top: 1rem;
+                    // position: relative;
+                    
+                }
+            }
+        }
+    }
+}
 
 @include mediaSm {
     main {
@@ -12,14 +55,23 @@
             
         }
 
-        &#aboutme {
-            .title-section{
-                position: initial;
-                max-width: initial;
-            }
-        }
+        // &#aboutme {
+        //     .title-section{
+        //         position: initial;
+        //         max-width: initial;
+        //     }
+        // }
         
-            
+            &#mywork {
+
+                .project-hover {
+                    flex-direction: column;
+
+                    .project-description, .project-links {
+                        width: 100%;
+                    }
+                }
+            }
         
     }
 
@@ -32,47 +84,6 @@
             line-height: 4.5rem;
             text-align: center;
             // padding: 0;
-        }
-    }
-}
-
-@include mediaMd {
-    main {
-        // &#home {
-        //     .title-section {
-        //         text-align: center;
-        //     }
-        // }
-
-        &#aboutme {
-            .title-section{
-                position: relative;
-                // width: 100%;
-                max-width: unset !important;
-                text-align: center;
-                top: initial;
-                padding-top: 6rem;
-            }
-
-            .content-section {
-                padding-top: 3rem;
-                .container {    
-                    width: 80%;
-                    
-                    .portrait-area {
-                        flex-direction: column;
-                        align-items: center;
-                        .social-media {
-                            padding-left: 0;
-                            width: 50%;
-                            // justify-content: space-between;
-                            padding-top: 1rem;
-                            // position: relative;
-                            
-                        }
-                    }
-                }    
-            }
         }
     }
 }

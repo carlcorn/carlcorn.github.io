@@ -1,0 +1,117 @@
+@mixin mywork {
+    $project-list-width: 65%;
+
+    h3 {
+        color: $primary-color;
+    }
+    
+ 
+    .project-list {
+        padding-top: 2rem;
+        .project-container{
+            position: relative;
+            margin: 1rem 0;
+            width: 100%;
+            max-height: 200px;
+            overflow: auto;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            @include easeOutFast;
+
+            @for $x from 1 through 3 {
+                &#project#{$x} {
+                    background-image: url(/portfolio/img/project#{$x}-sm.jpg);
+                }
+            }
+
+           
+            .project-hover {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                padding: 1rem;
+                visibility: hidden;
+                opacity: 0;
+                
+                .hover-overlay{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: black;
+                    opacity: 0.8;
+                    width: 100.5%;
+                    height: 100.5%;
+                    z-index: 0;
+                    transform: translate3d(0, -100%, 0);
+                    
+                }
+                
+                .project-description {
+                    width: $project-list-width;
+                    padding: 1rem;
+                    z-index: 1;
+                    transform: translate3d(-3rem, 0, 0);
+                    // opacity: 0;
+                    .project-name {
+                        margin: 0;
+                    }
+
+                    .project-list{
+                        padding-left: 2rem;
+                        padding-top: 1rem;
+                        // margin: 0;
+                    }
+                }
+
+                .project-links {
+                    width: 100% - $project-list-width;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-content: flex-end;
+                    align-items: center;
+                    z-index: 1;
+                    transform: translate3d(3rem, 0, 0);
+                    // opacity: 0;
+
+                    .source-link {
+                        padding: 0.5rem  2rem;
+                    }
+                    
+                }
+            }
+
+            &:hover {
+                @include easeOut();
+                max-height: 100vh;
+                .project-hover{
+                    visibility: visible;
+                    opacity: 1;
+                    @include easeOutFast();
+
+                    .hover-overlay {
+                        transform: translate3d(0,0,0);
+                        @include easeOutFast();
+                    }
+
+                    .project-description {
+                        transform: translate3d(0, 0, 0);
+                        // opacity: 1;
+                        @include easeOutFast;
+                    }
+                    .project-links{
+                        transform: translate3d(0, 0, 0);
+                        // opacity: 1;
+                        @include easeOutFast;
+                    }
+                }
+                
+            }
+
+
+        }
+    }
+}
